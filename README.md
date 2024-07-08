@@ -1,1 +1,1 @@
-Code handout for my students
+Code handout example for my students
