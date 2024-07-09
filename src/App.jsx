@@ -29,16 +29,37 @@ function App() {
   //width in Image/img: use it to adjust you image size. It varies by images, yours might be different
   //padingTop and PaddingBottom: we can be selective on what side to give space if we want. Or just say padding to have it on all sides
   //note when adding image on carousel: you use <img> instead of <Image>. They work the same
-  return ( <div>
-    <h1>"My Website"</h1>
-
+  return ( <div style= {{backgroundColor: 'black'}} > 
+    <h1 style={{color: 'white'}}>Lockwood and Co.</h1>
 
     <Image
-        src="src/assets/profilePicExample.png"
+src="src/assets/lucy.png.jpg"
+roundedCircle
+width="20%"
+style={ {paddingTop: 10, paddingBottom: 10} }
+/>
+    <Image
+        src="src/assets/anthony.png.jpg"
         roundedCircle
-        width="30%"
-        style={ {paddingTop: 40, paddingBottom: 40} }
+        width="20%"
+        style={ {paddingTop: 20, paddingBottom: 20} }
     />
+    
+<Image
+src="src/assets/george.png.jpg"
+roundedCircle
+width="20%"
+style={ {paddingTop: 20, paddingBottom: 20} }
+/>
+
+    <hr></hr>
+
+
+
+
+
+    <p style={{color: 'white'}}><i> This is a five-book series written by Jonathan Stroud.  It's set in an alternate version of London where ghosts have overrun the country and are killing people (The Problem).  Only children can see the ghosts, using their Talents (Sight, Touch, and Hearing), so they are tasked with hunting them. The series follows three of these "ghost hunters" who make up the company Lockwood and Co.</i> </p>
+
 
 
 
@@ -47,57 +68,51 @@ function App() {
 
 
 
-
-    <p> "p" component is to write text(paragraph). <i>Use it to write your bio (notice the added italic here)</i> </p>
-
-
-
-
-    <hr></hr>
-
-
-
-
-    <p> My experiences: </p>
-    <ul >
-      <li>this is the layout to write bullet points</li>
-      <li>use it to write experience, jobs, etc</li>
+    <p style={{color: 'white'}}> <b> Lucy Carlyle </b> </p>
+    <ul>
+    <p style={{color: 'white'}}>Role: narrator</p>
+    <p style={{color: 'white'}}>She believes we need to empathize with the ghosts to fix The Problem</p>
+    <p style={{color: 'white'}}>Her Talent is Hearing (though her Touch is strong, too), which means she is one of the few people who can hear what ghosts say</p>
     </ul>
+    <p style={{color: 'white'}}> <b>Anthony Lockwood</b></p>
+    <ul>
+      <p style={{color: 'white'}}>Role: leader/founder of the company </p>
+      <p style={{color: 'white'}}>He believes we need to keep killing ghosts to fix the problem</p>
+      <p style={{color: 'white'}}> His Talent is Sight, which means he can see ghosts more clearly than others </p>
+    </ul>
+<p style={{color: 'white'}}> <b>George Cubbins </b></p>
+<ul>
+  <p style={{color: 'white'}}>Role: researcher for the company</p>
+  <p style={{color: 'white'}}>He believes we need to keep researching The Problem to fix it</p>
+  <p style={{color: 'white'}}>His Talents are average all around</p>
+</ul>
+
+
+    <hr></hr>
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+    <hr></hr>
     
 
 
 
 
-    <hr></hr>
 
-
-
-
-
-
-
-    <p> this is a example of calling a <b>function to increase a number</b> (in programming its called a integer variable:)</p>
-    <Button variant='primary' onClick={() => incrimentCount()} > {count} </Button>
-
-
-
-
-
-
-
-    <hr></hr>
-    
-
-
-
-
-
-    <p>Bellow is component examples of:</p>
-    <ol>
-      <li>"grid"(rows and column)</li>
-      <li>cards</li>
-      <li>carousel</li>
-    </ol>
+   
+  
 
 
 
@@ -107,79 +122,11 @@ function App() {
 
 
 
-    <h2>Grid component example</h2>
+  
 
     <Container>
-      <p>at max size here: 2 row by 4 column.
-        Even though we coded this to have 8 column, the structure i gave you makes the max column value you can have to be 4.
-        So the other remaining Col wrap around to make a row
-      </p>
-      <Row>
-        <Col xs={12} md={6} lg={4} xl={3} > <Button>1</Button> </Col>
-        <Col xs={12} md={6} lg={4} xl={3} > <Button>2</Button> </Col>
-        <Col xs={12} md={6} lg={4} xl={3} > <Button>3</Button> </Col>
-        <Col xs={12} md={6} lg={4} xl={3} > <Button>4</Button> </Col>
-        <Col xs={12} md={6} lg={4} xl={3} > <Button>5</Button> </Col>
-        <Col xs={12} md={6} lg={4} xl={3} > <Button>6</Button> </Col>
-        <Col xs={12} md={6} lg={4} xl={3} > <Button>7</Button> </Col>
-        <Col xs={12} md={6} lg={4} xl={3} > <Button>8</Button> </Col>
-      </Row>
-
-
-
-      <p>this at max size: one row by 4 column. Left over components in a row wrap around to next row, in here 2 buttons go down</p>
-      <Row>
-        <Col xs={12} md={6} lg={4} xl={3} > <Button>row 1-1</Button> </Col>
-        <Col xs={12} md={6} lg={4} xl={3} > <Button>row 1-2</Button> </Col>
-        <Col xs={12} md={6} lg={4} xl={3} > <Button>row 1-3</Button> </Col>
-        <Col xs={12} md={6} lg={4} xl={3} > <Button>row 1-4</Button> </Col>
-        <Col xs={12} md={6} lg={4} xl={3} > <Button>row 1-5</Button> </Col>
-        <Col xs={12} md={6} lg={4} xl={3} > <Button>row 1-6</Button> </Col>
-      </Row>
-      <p>this at max size: one row by 3 column. 3 since we only have 3 columns in this one row</p>
-      <Row>
-        <Col xs={12} md={6} lg={4} xl={3} > <Button>row 2-1</Button> </Col>
-        <Col xs={12} md={6} lg={4} xl={3} > <Button>row 2-2</Button> </Col>
-        <Col xs={12} md={6} lg={4} xl={3} > <Button>row 2-3</Button> </Col>
-
-      </Row>
-
-
-
-      <p>
-        In case you wanted more columns, try this. Makes the max column 12
-      </p>
-      <Row>
-        <Col xs={12} md={6} lg={2} xl={1} > <Button>1</Button> </Col>
-        <Col xs={12} md={6} lg={2} xl={1} > <Button>2</Button> </Col>
-        <Col xs={12} md={6} lg={2} xl={1} > <Button>3</Button> </Col>
-        <Col xs={12} md={6} lg={2} xl={1} > <Button>4</Button> </Col>
-        <Col xs={12} md={6} lg={2} xl={1} > <Button>5</Button> </Col>
-        <Col xs={12} md={6} lg={2} xl={1} > <Button>6</Button> </Col>
-        <Col xs={12} md={6} lg={2} xl={1} > <Button>7</Button> </Col>
-        <Col xs={12} md={6} lg={2} xl={1} > <Button>8</Button> </Col>
-        <Col xs={12} md={6} lg={2} xl={1} > <Button>9</Button> </Col>
-        <Col xs={12} md={6} lg={2} xl={1} > <Button>10</Button> </Col>
-        <Col xs={12} md={6} lg={2} xl={1} > <Button>11</Button> </Col>
-        <Col xs={12} md={6} lg={2} xl={1} > <Button>12</Button> </Col>
-        <Col xs={12} md={6} lg={2} xl={1} > <Button>13</Button> </Col>
-      </Row>
-
-
-      <p>
-        Or this. max column 6
-      </p>
-      <Row>
-        <Col xs={12} md={6} lg={4} xl={2} > <Button>1</Button> </Col>
-        <Col xs={12} md={6} lg={4} xl={2} > <Button>2</Button> </Col>
-        <Col xs={12} md={6} lg={4} xl={2} > <Button>3</Button> </Col>
-        <Col xs={12} md={6} lg={4} xl={2} > <Button>4</Button> </Col>
-        <Col xs={12} md={6} lg={4} xl={2} > <Button>5</Button> </Col>
-        <Col xs={12} md={6} lg={4} xl={2} > <Button>6</Button> </Col>
-        <Col xs={12} md={6} lg={4} xl={2} > <Button>7</Button> </Col>
-      </Row>
-
-
+      
+      
 
 
 
@@ -195,28 +142,26 @@ function App() {
 
 
 
-    <h2>Cards component example</h2>
-    <p> note, using grid to make this have 3 Columns</p>
+    
 
       <Row className="justify-content-md-center" style={ {paddingTop: 40} }>
         <Col xs={12} md={6} lg={4} xl={3} style={ {margin: 12}}>
 
           <Card style={{ width: '18rem'}}>
 
-            <Card.Img variant="top" src="src/assets/googleLogo.png" />
+            <Card.Img variant="top" src="src/assets/tvshow.png" />
 
             <Card.Body>
 
-              <Card.Title>Card Title</Card.Title>
+              <Card.Title>Trailer for the Lockwood and Co.</Card.Title>
 
               <Card.Text>
-                Some quick example text to build on the card title and make up the
-                bulk of the card's content.
+                Came out in 2023 on Netflix
               </Card.Text>
 
               <Button
                 variant="primary"
-                href='https://www.google.com/'
+                href='https://www.youtube.com/watch?v=7-iYxGLpQzo'
                 target='_blank'>
                   
                   Go to link
@@ -229,19 +174,19 @@ function App() {
         <Col xs={12} md={6} lg={4} xl={3} style={ {margin: 12}}>
           <Card style={{ width: '18rem'}}>
 
-            <Card.Img variant="top" src="src/assets/bingLogo.png" />
+            <Card.Img variant="top" src="src/assets/goodreads.png" />
 
             <Card.Body>
 
-              <Card.Title> Bing </Card.Title>
+              <Card.Title> Lockwood and Co. on Goodreads </Card.Title>
 
               <Card.Text>
-                Who uses Bing??
+              Read in-depth summaries and other people's opinions on the books!
               </Card.Text>
 
               <Button
                 variant="primary"
-                href='https://www.bing.com/'
+                href='https://www.goodreads.com/series/76807-lockwood-co'
                 target='_blank'>
                   
                   Go to link
@@ -254,22 +199,23 @@ function App() {
         <Col xs={12} md={6} lg={4} xl={3} style={ {margin: 12}}>
           <Card style={{ width: '18rem'}}>
 
-            <Card.Img variant="top" src="src/assets/questionLogo.png" />
+            <Card.Img variant="top" src="src/assets/lockwood.png.jpg" />
 
             <Card.Body>
 
-              <Card.Title> Card 3 example </Card.Title>
+              <Card.Title> More character info </Card.Title>
 
               <Card.Text>
-                Random, Find out
+                Want to know what Lockwood keeps behind the door on the landing? Or the reason Lucy fled to London? Spoilers and more explanations here
               </Card.Text>
 
               <Button
                 variant="primary"
-                href='https://youtu.be/xvFZjo5PgG0?si=USd7x0S6CnEqYyys'
-                target='_blank'>
+                href='https://lockwoodandco.fandom.com/wiki/Lockwood_%26_Co._(series)'
+                target='_blank'
+                >
                   
-                  Go to link
+                Go to link
               </Button>
             
             </Card.Body>
@@ -293,13 +239,13 @@ function App() {
 
 
 
-    <h2>Carousel component example</h2>
+    <h2 style= {{color: 'white'}}><b>The Series in Order</b></h2>
 
     <Carousel>
       <Carousel.Item>
         <img
-          src="src/assets/googleLogo.png"
-          style={{aspectRatio: 1/1, width: "50%"}} >
+          src="src/assets/lockwood1.png"
+          style={{aspectRatio: 1/1.5, width: "30%"}} >
         </img>
         
       </Carousel.Item>
@@ -307,30 +253,39 @@ function App() {
 
       <Carousel.Item>
         <img
-          src="src/assets/bingLogo.png"
-          style={{aspectRatio: 1/1, width: "50%"}} >
+          src="src/assets/lockwood2.png"
+          style={{aspectRatio: 1/1.5, width: "30%"}} >
         </img>
 
-        <Carousel.Caption>
-          <h3 style={{color:'black'}}>Second slide label. You can add labels</h3>
-          <p style={{color:'black'}}> Also can add this. This can be more caption</p>
-        </Carousel.Caption>
+
       </Carousel.Item>
 
 
 
       <Carousel.Item>
         <img
-          src="src/assets/questionLogo.png"
-          style={{aspectRatio: 1/1, width: "50%"}} >
+          src="src/assets/lockwood33.png"
+          style={{aspectRatio: 1/1.5, width: "30%"}} >
         </img>
 
-        <Carousel.Caption>
-          <h3 style={{color:'red'}}>Third slide label. You dont need "p" component if you wish. Vise versa with header</h3>
-        </Carousel.Caption>
-
+      
       </Carousel.Item>
 
+      <Carousel.Item>
+        <img
+          src="src/assets/lockwood4.png"
+          style={{aspectRatio: 1/1.5, width: "30%"}} >
+        </img>
+        
+      </Carousel.Item>
+
+      <Carousel.Item>
+        <img
+          src="src/assets/lockwood5.png"
+          style={{aspectRatio: 1/1.5, width: "30%"}} >
+        </img>
+        
+      </Carousel.Item>
     </Carousel>
     
     
